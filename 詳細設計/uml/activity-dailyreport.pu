@@ -1,0 +1,20 @@
+@startuml
+|User|
+start
+:日報を入力;
+|System|
+if(バリデーションチェック) then(ok)
+else(no)
+:入力項目が不正ですモーダルを表示;
+|User|
+stop
+endif
+|System|
+:[画面更新]\n新しく投稿された日報を画面に追加;
+:reportsテーブルに日報を登録;
+if(アチーブメントが記入されている) then(yes)
+:ahievementsテーブルにアチーブメントを登録;
+else(no)
+endif
+end
+@enduml

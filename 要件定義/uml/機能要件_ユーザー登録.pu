@@ -1,0 +1,14 @@
+@startuml
+|User|
+start
+if(ユーザー登録済み) then(yes)
+else(no)
+|System|
+:ユーザー登録画面;
+|User|
+:ユーザー情報入力;
+|System|
+|DB|
+:insert;
+endif
+@enduml

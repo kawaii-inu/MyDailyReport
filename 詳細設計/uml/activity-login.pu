@@ -1,0 +1,27 @@
+@startuml
+|User|
+start
+if(ユーザー登録済み?) then(no)
+|System|
+:ユーザー登録画面の表示;
+|User|
+:ユーザー名とパスワードを入力;
+|System|
+:Usersテーブルに登録;
+else(yes)
+endif
+
+|User|
+:ログインする;
+|System|
+:DBでログイン認証する;
+if(認証成功?) then(yes)
+:認証失敗画面の表示;
+|User|
+stop
+else(yes)
+|System|
+:日報画面の表示;
+endif
+end
+@enduml

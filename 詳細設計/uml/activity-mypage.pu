@@ -1,0 +1,8 @@
+@startuml
+|User|
+:マイページボタンを押す;
+|System|
+:achivementsテーブルからアチーブメントN件を取得;
+:マイページを表示;
+end
+@enduml

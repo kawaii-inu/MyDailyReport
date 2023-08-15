@@ -1,0 +1,14 @@
+@startuml
+|User|
+start
+:ログインする;
+|System|
+:日報画面;
+|User|
+:日報を記入;
+|System|
+:日報画面の更新;
+|DB|
+:日報の登録;
+end
+@enduml

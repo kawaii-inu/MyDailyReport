@@ -1,0 +1,18 @@
+@startuml
+|User|
+start
+:ユーザー情報入力;
+|System|
+if(ユーザー情報が正しいか？) then(yes)
+else(no)
+|System|
+:ユーザー登録画面;
+|User|
+:ユーザー情報入力;
+|System|
+|DB|
+:insert;
+endif
+|System|
+:日報ページを表示;
+@enduml

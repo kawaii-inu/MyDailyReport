@@ -1,0 +1,25 @@
+@startuml
+class User{
+    String userId
+    String name
+    String[] reports
+}
+class Report{
+    String reportId
+    String title
+    String done
+    String keep
+    String problem
+    String try
+    String tweet
+    String achivement
+}
+class Achivement{
+    String achivementId
+    String content
+}
+class Format{
+    String formatId
+    String format
+}
+@enduml

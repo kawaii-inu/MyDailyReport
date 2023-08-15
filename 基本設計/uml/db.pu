@@ -1,0 +1,35 @@
+@startuml
+entity users as "Users" {
+    id BIGINT [PK]
+    --
+    username TEXT
+    password TEXT
+}
+entity reports as "DailyReports"{
+    id BIGINT [PK]
+    --
+    userId BIGINT [FK]
+    achievementId BIGINT [FK]
+    done TEXT
+    keep TEXT
+    problem TEXT
+    try TEXT
+    tweet TEXT
+}
+entity achievements as "Achievements"{
+    id BIGINT [PK]
+    --
+    userId BIGINT [FK]
+    achievement TEXT
+}
+entity formats as "Formats"{
+    id BIGINT [PK]
+    --
+    userId BIGINT [FK]
+    format TEXT
+}
+users ||--o{ reports
+users ||--o{ achievements
+reports ||--|| achievements
+users ||--o{ formats
+@enduml

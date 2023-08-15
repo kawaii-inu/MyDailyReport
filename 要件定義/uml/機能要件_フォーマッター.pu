@@ -1,0 +1,18 @@
+@startuml
+|User|
+start
+if(フォーマットが登録済み?) then(no)
+:日報の投稿用フォーマットを登録;
+|System|
+:DBに登録されたフォーマットを保存;
+else
+endif
+|User|
+:日報を書く;
+:フォーマットボタンを押す;
+|System|
+:フォーマット済みのテキストを表示;
+|User|
+:コピー;
+end
+@enduml

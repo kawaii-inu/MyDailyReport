@@ -1,0 +1,19 @@
+@startuml
+|User|
+start
+:日報を記入;
+|System|
+if(アチーブメントが記入されている?) then(yes)
+|DB|
+:アチーブメントテーブルを更新;
+else(no)
+endif
+|User|
+:マイページを開く;
+|System|
+:アチーブメントテーブルへfetch;
+|DB|
+:アチーブメントをSelect;
+|System|
+:アチーブメントを表示;
+@enduml
