@@ -22,9 +22,11 @@ services:
     volumes:
       - ./mysql/settings:/etc/mysql/conf.d/
       - ./mysql/data/:/var/lib/mysql/
+      - ./mysql/seed:/docker-entrypoint-initdb.d
     environment:
       MYSQL_DATABASE: mdr_db
       MYSQL_ROOT_PASSWORD: password
+      TZ: Asia/Tokyo
     networks:
       - api-net
 networks:
